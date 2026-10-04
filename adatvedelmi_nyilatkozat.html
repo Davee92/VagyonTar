@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Befektetés Követő – Adatvédelmi tájékoztató</title>
+<style>
+  :root { --bg:#F6F7F8; --fg:#191C1E; --muted:#41484D; --accent:#1F4E5F; --line:#C1C7CC; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#000; --fg:#E3E5E7; --muted:#BEC5CA; --accent:#9CCBDB; --line:#33393D; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:28px; line-height:1.25; margin:0 0 4px; color:var(--accent); }
+  h2 { font-size:19px; margin:32px 0 8px; }
+  p, li { color:var(--fg); }
+  .muted { color:var(--muted); font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; margin:8px 0; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-weight:600; }
+  @media (max-width:560px) { table, thead, tbody, tr, th, td { display:block; } thead { display:none; } td { border:0; padding:2px 0; } tr { border-bottom:1px solid var(--line); padding:8px 0; } td:first-child { font-weight:600; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Adatvédelmi tájékoztató</h1>
+<p class="muted">Befektetés Követő (Android alkalmazás, csomagnév: hu.davee.befektetes) · Hatályos: 2026. október 4.</p>
+
+<h2>Röviden</h2>
+<p>Az alkalmazás nem gyűjt rólad személyes adatot, nem használ fiókot, reklámot, analitikát vagy követést. Minden, amit megadsz (befektetések, vásárlások, számlák, pénzmozgások, beállítások), kizárólag a telefonodon tárolódik. A fejlesztő semmilyen adatodhoz nem fér hozzá.</p>
+
+<h2>Milyen adatokat tárol az alkalmazás – és hol?</h2>
+<p>A befektetéseid adatai (pl. ticker, ISIN, állampapír-sorozat, vételár, darabszám, számlák neve, pénzmozgások, nyugdíjpénztári egyenleg) és a letöltött árfolyamok az alkalmazás saját, privát tárhelyén, a készülékeden maradnak. Az alkalmazás rendszer-szintű felhőmentése ki van kapcsolva. Mentés csak akkor készül, ha te magad exportálsz egy fájlt; ennek helyét te választod ki.</p>
+<p>Ha tartalék árfolyamforráshoz saját API-kulcsot adsz meg, azt az alkalmazás az Android Keystore segítségével titkosítva, csak a készüléken tárolja, és csak az adott szolgáltatónak küldi el a lekérdezésekkel.</p>
+
+<h2>Milyen lekérdezéseket küld az alkalmazás az internetre?</h2>
+<p>Az árfolyamok és kibocsátási adatok frissítéséhez az alkalmazás közvetlenül a lenti nyilvános adatforrásokhoz fordul. A lekérdezések csak az adott eszköz azonosítóját tartalmazzák (pl. tickert, ISIN-t, állampapír-sorozatot, devizakódot), összeget, nevet vagy más személyes adatot nem. Mint minden internetes kérésnél, a szolgáltató láthatja a készüléked IP-címét; ezekre a szolgáltatók saját adatkezelési szabályai vonatkoznak.</p>
+<table>
+<thead><tr><th>Szolgáltatás</th><th>Mit kér le az app</th><th>Mikor</th></tr></thead>
+<tbody>
+<tr><td>Yahoo Finance</td><td>ETF-árfolyamok és -keresés ticker alapján</td><td>Frissítéskor, kereséskor</td></tr>
+<tr><td>Alpha Vantage</td><td>ETF-árfolyam, devizaárfolyam (ticker / devizakód)</td><td>Csak ha megadtál API-kulcsot, és az elsődleges forrás nem adott érvényes adatot</td></tr>
+<tr><td>EODHD</td><td>ETF-árfolyam (ticker / ISIN)</td><td>Csak ha megadtál API-kulcsot, és az előző források nem adtak érvényes adatot</td></tr>
+<tr><td>Államadósság Kezelő Központ (ÁKK)</td><td>Állampapír-sorozatok, kamatfizetési táblák</td><td>Frissítéskor, állampapír hozzáadásakor</td></tr>
+<tr><td>Európai Központi Bank; Frankfurter (tartalék)</td><td>Devizaárfolyamok</td><td>Frissítéskor</td></tr>
+<tr><td>MNB Pénztárfolyam</td><td>Nyugdíjpénztári portfólió-árfolyamok</td><td>Frissítéskor, ha van nyugdíjpénztári számlád</td></tr>
+</tbody>
+</table>
+<p>Az alkalmazás soha nem kér és nem tárol nyugdíjpénztári, ügyfélkapus, banki vagy bróker belépési adatot, és nem lép be semmilyen ügyfélfelületre.</p>
+
+<h2>Engedélyek</h2>
+<ul>
+<li><b>Internet és hálózati állapot</b> – az árfolyamok letöltéséhez, illetve annak jelzéséhez, ha nincs kapcsolat.</li>
+<li><b>Biometrikus azonosítás</b> (opcionális) – az alkalmazás zárolásához. Az ujjlenyomatot vagy arcképet az Android rendszer kezeli; az alkalmazás csak a sikeres azonosítás tényét kapja meg. Bekapcsolt zárnál az alkalmazás képernyője nem rögzíthető képernyőképpel.</li>
+</ul>
+
+<h2>Adatok törlése</h2>
+<p>Mivel az adatok csak a készülékeden vannak, az alkalmazásban bármikor törölheted őket, vagy az alkalmazás eltávolításával (illetve a rendszerbeállításokban az adatok törlésével) mindent véglegesen törölhetsz. A fejlesztőnél nincs törölnivaló adat.</p>
+
+<h2>Gyermekek</h2>
+<p>Az alkalmazás felnőtteknek szól, és nem gyűjt adatot gyermekekről sem.</p>
+
+<h2>Változások</h2>
+<p>Ha az adatkezelés változik (pl. új adatforrás), ezt a tájékoztatót frissítjük, és a fenti hatálydátumot módosítjuk.</p>
+
+<h2>Kapcsolat</h2>
+<p>Kérdés esetén: <b>[IDE ÍRD A KAPCSOLATI E-MAIL CÍMET]</b></p>
+</main>
+</body>
+</html>
